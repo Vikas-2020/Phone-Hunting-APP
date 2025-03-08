@@ -54,10 +54,10 @@ phone-hunting-api/
 - Add filters for price, brand, and specifications.
 
 ## Live Demo
-[View Hosted Project](your-hosted-link-here)
+[View Hosted Project](https://phone-hunting-app-vikas-kumars-projects-a25b81d4.vercel.app/)
 
 ## GitHub Repository
-[View on GitHub](https://github.com/your-username/phone-hunting-api)
+[View on GitHub](https://github.com/Vikas-2020/Phone-Hunting-APP)
 
 ## License
 This project is open-source and available under the MIT License.

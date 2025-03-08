@@ -252,6 +252,8 @@ body{
     }
     .p-txt{
         font-size: 1rem;
+        padding-left:1rem;
+        padding-right:1rem;
     }
     #input{
         width: 10rem;

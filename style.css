@@ -1,0 +1,288 @@
+body{
+    overflow-x: hidden;
+}
+.output{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.phone{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    box-shadow: 3px 9px 14px 3px rgba(35, 53, 95, 0.525);
+    border-radius: 10px;
+}
+
+.phone h2{
+    font-size: x-large;
+    font-weight: 700;
+}
+.phone p{
+    font-size: large;
+    text-align: center;
+}
+.phoneButton {
+    color: white;
+    background-color: #7c3aed; /* Equivalent to bg-violet-600 */
+    padding: 12px 16px; /* Equivalent to px-4 py-3 */
+    border-radius: 12px; /* Equivalent to rounded-xl */
+    font-weight: bold; /* Equivalent to font-bold */
+    text-transform: uppercase; /* Equivalent to uppercase */
+    font-size: 14px; /* Equivalent to text-[14px] */
+    cursor: pointer; /* Equivalent to cursor-pointer */
+    transition: background-color 0.3s ease-in-out; /* Equivalent to transition duration-300 ease-in-out */
+}
+
+.phoneButton:hover {
+    background-color: #5b21b6; /* Equivalent to hover:bg-violet-800 */
+}
+
+.loading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-size: 2rem;
+    }
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #6366f1; /* Violet color */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+ /* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(12, 26, 59);
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    color: white;
+    animation: fadeIn 0.3s ease-in-out;
+    width: 30%;
+    max-height: 80vh; /* Prevent overflowing modal */
+    overflow-y: auto; /* Allow scrolling */
+    color: #A6ADBA;
+    box-shadow: 5px 5px 5px rgba(46, 70, 203, 0.3);
+}
+
+/* Modal Content */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Ensure Image Displays Correctly */
+.modal-content img {
+    max-width: 100%; /* Ensure it fits inside the modal */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent flex-related issues */
+    border-radius: 8px; /* Slightly rounded edges */
+}
+
+/* Title & Details */
+#detailsPhoneName {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+#detailsBrand {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Smooth fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Smooth fade-out effect */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.close:hover {
+    transform: scale(1.2);
+    color: #ff5a5f; /* Soft red shade for better visibility */
+}
+
+/* Close modal smoothly */
+.hidden {
+    animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+/* Custom Scrollbar */
+.modal::-webkit-scrollbar {
+    width: 5px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background: #3d47d3; /* Violet color for scrollbar */
+    border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); /* Light background */
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .output {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .phone {
+        width: 80%; /* Make items take more width */
+        padding: 1.5rem;
+    }
+
+    .phone h2 {
+        font-size: large;
+    }
+
+    .phone p {
+        font-size: medium;
+    }
+
+    .modal {
+        width: 90%; /* Make modal wider */
+        max-height: 85vh;
+    }
+
+    .modal-content {
+        padding: 1rem;
+    }
+
+    .phoneButton {
+        font-size: 12px;
+        padding: 10px 14px;
+    }
+
+    .main{
+        padding-top:100px;
+    }
+}
+
+/* Tablets & small laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .phone {
+        width: 45%; /* Adjust width for better fit */
+    }
+
+    .modal {
+        width: 50%;
+    }
+}
+
+/* Small screens (max-width: 576px) */
+@media (max-width: 576px) {
+    #input, .btn{
+        height: 2.5rem;
+    }
+    nav{
+        h2{
+            font-size: medium;
+        }
+        padding: 10px 30px;
+    }
+    button{
+        font-size: 10px;
+    }
+    .h-txt{
+        font-size: 2rem;
+    }
+    .p-txt{
+        font-size: 1rem;
+    }
+    #input{
+        width: 10rem;
+    }
+    .phone {
+        width: 90%; /* Full width for better visibility */
+        padding: 1rem;
+    }
+
+    .phone h2 {
+        font-size: 14px; /* Decrease font size for small screens */
+    }
+
+    .phone p {
+        font-size: 12px; /* Decrease font size for small screens */
+    }
+
+    .modal {
+        width: 95%; /* Full width modal */
+        padding: 15px;
+    }
+
+    .modal-content {
+        gap: 0.8rem;
+    }
+
+    .close {
+        font-size: 20px;
+        top: 5px;
+        right: 10px;
+    }
+
+    .phoneButton {
+        font-size: 10px; /* Decrease font size of button */
+        padding: 8px 12px; /* Adjust padding to fit */
+    }
+}

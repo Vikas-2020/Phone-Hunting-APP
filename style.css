@@ -90,6 +90,7 @@ body{
     overflow-y: auto; /* Allow scrolling */
     color: #A6ADBA;
     box-shadow: 5px 5px 5px rgba(46, 70, 203, 0.3);
+    z-index: 10;
 }
 
 /* Modal Content */
